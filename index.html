@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paula Davies - Governance Leadership</title>
+    <meta name="description" content="Paula Davies - General Counsel, Company Secretary, and Non-Executive Director specializing in governance, risk, integrity frameworks, and safeguarding.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        :root {
+            --background: hsl(210, 40%, 98%);
+            --foreground: hsl(222.2, 84%, 4.9%);
+            --card: hsl(0, 0%, 100%);
+            --card-foreground: hsl(222.2, 84%, 4.9%);
+            --primary: hsl(270, 60%, 50%);
+            --primary-foreground: hsl(210, 40%, 98%);
+            --secondary: hsl(270, 20%, 96%);
+            --secondary-foreground: hsl(222.2, 84%, 4.9%);
+            --muted: hsl(270, 20%, 96%);
+            --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+            --accent: hsl(280, 70%, 65%);
+            --accent-foreground: hsl(210, 40%, 98%);
+            --destructive: hsl(0, 84.2%, 60.2%);
+            --destructive-foreground: hsl(210, 40%, 98%);
+            --border: hsl(214.3, 31.8%, 91.4%);
+            --input: hsl(214.3, 31.8%, 91.4%);
+            --ring: hsl(270, 60%, 50%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
+            color: hsl(var(--foreground));
+            background-color: hsl(var(--background));
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: hsl(var(--muted));
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: hsl(var(--primary));
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: hsl(var(--primary) / 0.8);
+        }
+
+        /* Utility Classes */
+        .hero-gradient {
+            background: linear-gradient(135deg, hsl(210, 40%, 98%) 0%, hsl(210, 40%, 96%) 100%);
+        }
+
+        .achievement-counter {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: hsl(270, 60%, 50%);
+        }
+
+        .section-padding {
+            padding: 5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 3rem 0;
+            }
+        }
+
+        .container {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background-color: hsl(var(--background) / 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid hsl(var(--border));
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4rem;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-logo {
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: hsl(var(--primary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-logo span {
+            color: hsl(var(--primary-foreground));
+            font-weight: bold;
+            font-size: 1.125rem;
+        }
+
+        .nav-title {
+            font-weight: 600;
+            color: hsl(var(--foreground));
+        }
+
+        .nav-menu {
+            display: none;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .nav-menu {
+                display: flex;
+            }
+        }
+
+        .nav-link {
+            background: none;
+            border: none;
+            font-family: inherit;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: color 0.2s ease;
+            color: hsl(var(--muted-foreground));
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: hsl(var(--foreground));
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 4rem;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .hero-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-title {
+                font-size: 3.75rem;
+            }
+        }
+
+        .text-primary {
+            color: hsl(var(--primary));
+        }
+
+        .text-accent {
+            color: hsl(var(--accent));
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: hsl(var(--muted-foreground));
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        @media (min-width: 640px) {
+            .hero-description {
+                font-size: 1.25rem;
+            }
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background-color: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
+        }
+
+        .btn-primary:hover {
+            background-color: hsl(var(--primary) / 0.9);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: hsl(var(--foreground));
+            border: 1px solid hsl(var(--border));
+        }
+
+        .btn-outline:hover {
+            background-color: hsl(var(--muted));
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-width: 28rem;
+            height: auto;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 3rem 0;
+            }
+        }
+
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #8033cc;
+        }
+
+        @media (min-width: 640px) {
+            .section-title {
+                font-size: 2.25rem;
+            }
+        }
+
+        .section-description {
+            font-size: 1.25rem;
+            color: hsl(var(--muted-foreground));
+            max-width: 48rem;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .bg-card {
+            background-color: hsl(var(--card));
+        }
+
+        .bg-background {
+            background-color: hsl(var(--background));
+        }
+
+        /* Grid Systems */
+        .grid {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .grid-2 {
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 1024px) {
+            .grid-2 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .grid-3 {
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 768px) {
+            .grid-3 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .grid-3 {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .grid-4 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (min-width: 768px) {
+            .grid-4 {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
+
+        /* About Section */
+        .about-text {
+            color: hsl(var(--muted-foreground));
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .expertise-card {
+            background-color: hsl(var(--secondary) / 0.5);
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .expertise-title {
+            font-weight: 500;
+            color: hsl(var(--foreground));
+        }
+
+        .expertise-desc {
+            font-size: 0.875rem;
+            color: hsl(var(--muted-foreground));
+        }
+
+        .credential-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .credential-dot {
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: hsl(var(--accent));
+            border-radius: 50%;
+        }
+
+        .credential-text {
+            color: hsl(var(--muted-foreground));
+        }
+
+        /* Experience Cards */
+        .experience-card {
+            background-color: hsl(var(--card));
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid hsl(var(--border));
+            transition: box-shadow 0.2s ease;
+        }
+
+        .experience-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .experience-card.large {
+            grid-column: span 1;
+        }
+
+        @media (min-width: 768px) {
+            .experience-card.large {
+                grid-column: span 2;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .experience-card.large {
+                grid-column: span 3;
+            }
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .badge-default {
+            background-color: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
+        }
+
+        .badge-secondary {
+            background-color: hsl(var(--secondary));
+            color: hsl(var(--secondary-foreground));
+        }
+
+        .experience-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin: 0.5rem 0;
+            color: #8033cc;
+        }
+
+        .experience-title.large {
+            font-size: 1.25rem;
+        }
+
+        .experience-org {
+            color: hsl(var(--accent));
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+
+        .experience-desc {
+            color: hsl(var(--muted-foreground));
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-highlights {
+            font-size: 0.875rem;
+            color: hsl(var(--muted-foreground));
+        }
+
+        /* Contact Section */
+        .contact-info {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 3rem;
+            height: 3rem;
+            background-color: hsl(var(--primary) / 0.1);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-form {
+            background-color: hsl(var(--secondary) / 0.5);
+            padding: 2rem;
+            border-radius: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: hsl(var(--foreground));
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid hsl(var(--border));
+            border-radius: 0.375rem;
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+            font-family: inherit;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: hsl(var(--ring));
+            box-shadow: 0 0 0 2px hsl(var(--ring) / 0.2);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 8rem;
+        }
+
+        .focus-areas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .focus-badge {
+            background-color: hsl(var(--secondary));
+            color: hsl(var(--secondary-foreground));
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: hsl(var(--foreground));
+            color: hsl(var(--background));
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-logo {
+            width: 2rem;
+            height: 2rem;
+            background-color: hsl(var(--primary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-logo span {
+            color: hsl(var(--primary-foreground));
+            font-weight: bold;
+        }
+
+        .footer-text {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        .footer-social {
+            opacity: 0.8;
+            transition: opacity 0.2s ease;
+        }
+
+        .footer-social:hover {
+            opacity: 1;
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-16 {
+            margin-bottom: 4rem;
+        }
+
+        .mb-12 {
+            margin-bottom: 3rem;
+        }
+
+        .mb-8 {
+            margin-bottom: 2rem;
+        }
+
+        .mb-6 {
+            margin-bottom: 1.5rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem;
+        }
+
+        .mb-3 {
+            margin-bottom: 0.75rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .space-y-8 > * + * {
+            margin-top: 2rem;
+        }
+
+        .space-y-6 > * + * {
+            margin-top: 1.5rem;
+        }
+
+        .space-y-4 > * + * {
+            margin-top: 1rem;
+        }
+
+        .space-y-2 > * + * {
+            margin-top: 0.5rem;
+        }
+
+        .space-y-1 > * + * {
+            margin-top: 0.25rem;
+        }
+
+        .font-semibold {
+            font-weight: 600;
+        }
+
+        .font-medium {
+            font-weight: 500;
+        }
+
+        .text-sm {
+            font-size: 0.875rem;
+        }
+
+        .text-lg {
+            font-size: 1.125rem;
+        }
+
+        .text-xl {
+            font-size: 1.25rem;
+        }
+
+        .text-2xl {
+            font-size: 1.5rem;
+        }
+
+        .leading-relaxed {
+            line-height: 1.7;
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background-color: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            border-radius: 0.5rem;
+            padding: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            z-index: 100;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.3s ease;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .toast.error {
+            border-color: hsl(var(--destructive));
+            background-color: hsl(var(--destructive) / 0.1);
+        }
+
+        .toast-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .toast-description {
+            font-size: 0.875rem;
+            color: hsl(var(--muted-foreground));
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <div class="nav-logo">
+                        <span>P</span>
+                    </div>
+                    <span class="nav-title">Paula Davies</span>
+                </div>
+                <div class="nav-menu">
+                    <button class="nav-link active" onclick="scrollToSection('home')" data-section="home">Home</button>
+                    <button class="nav-link" onclick="scrollToSection('about')" data-section="about">About</button>
+                    <button class="nav-link" onclick="scrollToSection('experience')" data-section="experience">Experience</button>
+                    <button class="nav-link" onclick="scrollToSection('contact')" data-section="contact">Contact</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero hero-gradient">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <h1 class="hero-title">
+                        Governance Leadership That 
+                        <span class="text-primary">Builds Trust</span> and 
+                        <span class="text-accent">Drives Impact</span>
+                    </h1>
+                    <p class="hero-description">
+                        I help organisations navigate complexity with integrity, creating governance frameworks that aren't just about compliance—they're about building the foundation for meaningful change and sustainable growth.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToSection('experience')">
+                            View My Experience
+                        </button>
+                        <a href="https://www.linkedin.com/in/4711/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            <i data-lucide="linkedin"></i>
+                            <span>LinkedIn Profile</span>
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="data:image/jpeg;base64,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" class="hero-img" alt="Paula Davies">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-card">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-description">
+                    Thirty years in the trenches has taught me that good governance isn't about perfect processes—it's about creating spaces where people can do their best work with integrity and purpose.
+                </p>
+            </div>
+            
+            <div class="grid grid-2 mb-16">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold" style="color: #8033cc;">Leadership Philosophy</h3>
+                    <p class="about-text">
+                        I've learned that the best governance happens when we stop seeing it as a checkbox exercise and start understanding it as the foundation for trust, accountability, and better outcomes. It's messy work, but it's also some of the most important work we can do.
+                    </p>
+                    <p class="about-text">
+                        Whether I'm sitting around a boardroom table as a Non-Executive Director, advising on complex legal matters as General Counsel, or helping organisations navigate safeguarding challenges, my approach stays the same: listen deeply, ask the right questions, and help people see the bigger picture.
+                    </p>
+                    <p class="about-text">
+                        I'm particularly passionate about creating governance frameworks that support vulnerable people and drive gender equity. Because at the end of the day, good governance should make the world a little bit better for everyone.
+                    </p>
+                </div>
+                
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4" style="color: #8033cc;">Key Expertise Areas</h4>
+                        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="expertise-card">
+                                <div class="expertise-title">Governance & Risk</div>
+                                <div class="expertise-desc">Strategic frameworks</div>
+                            </div>
+                            <div class="expertise-card">
+                                <div class="expertise-title">Legal Counsel</div>
+                                <div class="expertise-desc">Corporate & compliance</div>
+                            </div>
+                            <div class="expertise-card">
+                                <div class="expertise-title">Safeguarding</div>
+                                <div class="expertise-desc">Child & vulnerable adults</div>
+                            </div>
+                            <div class="expertise-card">
+                                <div class="expertise-title">Board Advisory</div>
+                                <div class="expertise-desc">NED & committee roles</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4" style="color: #8033cc;">Professional Credentials</h4>
+                        <div class="space-y-2">
+                            <div class="credential-item">
+                                <div class="credential-dot"></div>
+                                <span class="credential-text"><strong>GAICD</strong> - Graduate, Australian Institute of Company Directors</span>
+                            </div>
+                            <div class="credential-item">
+                                <div class="credential-dot"></div>
+                                <span class="credential-text"><strong>FGIA</strong> - Fellow, Governance Institute of Australia</span>
+                            </div>
+                            <div class="credential-item">
+                                <div class="credential-dot"></div>
+                                <span class="credential-text"><strong>FGLF</strong> - Fellow, Governor's Leadership Foundation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Achievement Stats -->
+            <div class="grid grid-4 text-center">
+                <div>
+                    <div class="achievement-counter mb-2">30+</div>
+                    <div class="credential-text">Years Experience</div>
+                </div>
+                <div>
+                    <div class="achievement-counter mb-2">15+</div>
+                    <div class="credential-text">Board Positions</div>
+                </div>
+                <div>
+                    <div class="achievement-counter mb-2">8</div>
+                    <div class="credential-text">Current NED Roles</div>
+                </div>
+                <div>
+                    <div class="achievement-counter mb-2">100%</div>
+                    <div class="credential-text">Purpose-Driven</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-background">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Experience & Portfolio</h2>
+                <p class="section-description">
+                    Real roles, real impact. From AI governance to safeguarding vulnerable communities—here's where I'm building expertise at the intersection of technology, ethics, and human protection.
+                </p>
+            </div>
+            
+            <div class="grid grid-3">
+                <!-- Current Role -->
+                <div class="experience-card large">
+                    <div class="grid grid-2">
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                                <span class="badge badge-default">Current Role</span>
+                                <span class="text-sm credential-text">May 2023 - Present</span>
+                            </div>
+                            <h3 class="experience-title large">General Counsel & Company Secretary</h3>
+                            <p class="experience-org">Adelaide PHN</p>
+                            <p class="credential-text">Leading legal and governance strategy for one of Australia's primary health networks, ensuring robust frameworks support improved health outcomes for South Australian communities.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-medium mb-2">Key Responsibilities:</h4>
+                                <ul class="text-sm credential-text space-y-1">
+                                    <li>• Strategic legal counsel to executive leadership</li>
+                                    <li>• Governance framework development and oversight</li>
+                                    <li>• Risk management and compliance programs</li>
+                                    <li>• Board and committee secretariat services</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Governance -->
+                <div class="experience-card">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                        <span class="badge badge-secondary">AI Governance</span>
+                    </div>
+                    <h3 class="experience-title">AI & Data Privacy Committee Member</h3>
+                    <p class="experience-desc">Contributing legal expertise to emerging AI governance frameworks and data privacy regulations, helping shape ethical technology implementation.</p>
+                    <div class="experience-highlights">
+                        <div>• AI ethics and regulation development</div>
+                        <div>• Data privacy framework design</div>
+                        <div>• Technology risk assessment</div>
+                    </div>
+                </div>
+
+                <!-- Safeguarding -->
+                <div class="experience-card">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                        <span class="badge badge-secondary">Safeguarding</span>
+                    </div>
+                    <h3 class="experience-title">Safeguarding & Child Protection Roles</h3>
+                    <p class="experience-desc">Leading safeguarding initiatives across Blue Knot Foundation, Tasmania's Child Safety Panel, and professional standards roles.</p>
+                    <div class="experience-highlights">
+                        <div>• Child safety and wellbeing oversight</div>
+                        <div>• Trauma-informed governance</div>
+                        <div>• Professional standards development</div>
+                    </div>
+                </div>
+
+                <!-- Board Leadership -->
+                <div class="experience-card">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                        <span class="badge badge-secondary">Board Leadership</span>
+                    </div>
+                    <h3 class="experience-title">Non-Executive Director Roles</h3>
+                    <p class="experience-desc">Strategic governance across mental health, disability services, and trauma recovery organisations.</p>
+                    <div class="experience-highlights">
+                        <div>• Digital capability oversight</div>
+                        <div>• Service quality and safety</div>
+                        <div>• People, culture & remuneration</div>
+                    </div>
+                </div>
+
+                <!-- Risk & Audit -->
+                <div class="experience-card">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                        <span class="badge badge-secondary">Risk & Audit</span>
+                    </div>
+                    <h3 class="experience-title">Audit Committee Chair & Member</h3>
+                    <p class="experience-desc">Independent audit and risk committee roles across multiple councils and organisations over 6+ years.</p>
+                    <div class="experience-highlights">
+                        <div>• Financial oversight and audit</div>
+                        <div>• Risk framework development</div>
+                        <div>• Compliance monitoring</div>
+                    </div>
+                </div>
+
+                <!-- Legal Expertise -->
+                <div class="experience-card">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                        <span class="badge badge-secondary">Legal Counsel</span>
+                    </div>
+                    <h3 class="experience-title">Senior Legal & Government Roles</h3>
+                    <p class="experience-desc">Extensive experience across SA Police, health networks, government departments, and regulatory bodies.</p>
+                    <div class="experience-highlights">
+                        <div>• Corporate legal advisory</div>
+                        <div>• Regulatory compliance</div>
+                        <div>• Policy development</div>
+                    </div>
+                </div>
+
+                <!-- Consulting -->
+                <div class="experience-card">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                        <span class="badge badge-secondary">Consulting</span>
+                    </div>
+                    <h3 class="experience-title">Integrity Matters Consulting</h3>
+                    <p class="experience-desc">Principal of specialist consulting practice focused on governance, integrity frameworks, and safeguarding advisory services.</p>
+                    <div class="experience-highlights">
+                        <div>• Governance framework design</div>
+                        <div>• Integrity system implementation</div>
+                        <div>• Safeguarding advisory</div>
+                    </div>
+                </div>
+
+                <!-- Recognition -->
+                <div class="experience-card">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                        <span class="badge badge-secondary">Recognition</span>
+                    </div>
+                    <h3 class="experience-title">Professional Recognition & Innovation</h3>
+                    <p class="experience-desc">Governance Top 100 Finalist 2024, Law Society Opinion Piece Award, and Introduction to AI certification—bridging traditional governance with emerging technology.</p>
+                    <div class="experience-highlights">
+                        <div>• AI governance thought leadership</div>
+                        <div>• Innovative safeguarding approaches</div>
+                        <div>• Cross-sector expertise integration</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-card">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-description">
+                    Ready to explore how we can work together? I'd love to hear about your governance challenges and discuss how I might help you navigate them with integrity and purpose.
+                </p>
+            </div>
+            
+            <div class="grid grid-2">
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6" style="color: #8033cc;">Get In Touch</h3>
+                        <div class="space-y-6">
+                            <div class="contact-info">
+                                <div class="contact-icon">
+                                    <i data-lucide="mail" style="color: hsl(270, 60%, 50%);"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Email</h4>
+                                    <a href="mailto:paula@integritymatters.au" style="color: hsl(270, 60%, 50%); text-decoration: none;">
+                                        paula@integritymatters.au
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info">
+                                <div class="contact-icon">
+                                    <i data-lucide="linkedin" style="color: hsl(270, 60%, 50%);"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">LinkedIn</h4>
+                                    <a href="https://www.linkedin.com/in/4711/" target="_blank" rel="noopener noreferrer" style="color: hsl(270, 60%, 50%); text-decoration: none;">
+                                        Connect with me
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info">
+                                <div class="contact-icon">
+                                    <i data-lucide="map-pin" style="color: hsl(270, 60%, 50%);"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Location</h4>
+                                    <p class="credential-text">Adelaide, South Australia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-medium mb-4">Areas of Focus</h4>
+                        <div class="focus-areas">
+                            <span class="focus-badge">Governance Strategy</span>
+                            <span class="focus-badge">Risk Management</span>
+                            <span class="focus-badge">Integrity Frameworks</span>
+                            <span class="focus-badge">Safeguarding</span>
+                            <span class="focus-badge">Board Advisory</span>
+                            <span class="focus-badge">Legal Counsel</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form class="space-y-6" onsubmit="handleSubmit(event)">
+                        <div class="grid" style="grid-template-columns: 1fr; gap: 1.5rem;">
+                            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div class="form-group">
+                                    <label class="form-label" for="name">Name</label>
+                                    <input class="form-input" id="name" name="name" type="text" placeholder="Your full name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input class="form-input" id="email" name="email" type="email" placeholder="your@email.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="subject">Subject</label>
+                                <input class="form-input" id="subject" name="subject" type="text" placeholder="How can I help?">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="message">Message</label>
+                                <textarea class="form-input form-textarea" id="message" name="message" rows="5" placeholder="Tell me about your governance challenges or how we might work together..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span>P</span>
+                    </div>
+                    <span class="font-semibold">Paula Davies</span>
+                </div>
+                <div class="text-center">
+                    <p class="footer-text">
+                        © 2025 Paula Davies. Building trust through governance excellence.
+                    </p>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/4711/" target="_blank" rel="noopener noreferrer" class="footer-social">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div id="toast" class="toast"></div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Navigation scroll tracking
+        let activeSection = 'home';
+
+        function updateActiveNavLink() {
+            const sections = ['home', 'about', 'experience', 'contact'];
+            let current = '';
+
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top <= 60 && rect.bottom >= 60) {
+                        current = section;
+                    }
+                }
+            });
+
+            if (current && current !== activeSection) {
+                activeSection = current;
+                
+                // Update nav links
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.dataset.section === activeSection) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        }
+
+        // Smooth scroll function
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Toast notification
+        function showToast(message, description = '', isError = false) {
+            const toast = document.getElementById('toast');
+            toast.innerHTML = `
+                <div class="toast-title">${message}</div>
+                ${description ? `<div class="toast-description">${description}</div>` : ''}
+            `;
+            
+            if (isError) {
+                toast.classList.add('error');
+            } else {
+                toast.classList.remove('error');
+            }
+            
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 5000);
+        }
+
+        // Form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            
+            // Basic validation
+            if (!name || !email || !message) {
+                showToast('Please fill in all required fields', '', true);
+                return;
+            }
+            
+            // Simulate form submission
+            showToast(
+                'Thank you for your message!', 
+                "I'll get back to you soon. For immediate contact, please connect via LinkedIn."
+            );
+            
+            // Reset form
+            event.target.reset();
+        }
+
+        // Event listeners
+        window.addEventListener('scroll', updateActiveNavLink);
+        
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', () => {
+            updateActiveNavLink();
+        });
+    </script>
+</body>
+</html>
